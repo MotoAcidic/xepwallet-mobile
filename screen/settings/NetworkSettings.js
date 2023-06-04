@@ -5,6 +5,10 @@ import Notifications from '../../blue_modules/notifications';
 import navigationStyle from '../../components/navigationStyle';
 import { SafeBlueArea, BlueListItem } from '../../BlueComponents';
 import loc from '../../loc';
+<<<<<<< HEAD
+=======
+import { isDesktop } from '../../blue_modules/environment';
+>>>>>>> 646c5a8... DEL: Remove isCatalyst package
 
 const NetworkSettings = () => {
   const { navigate } = useNavigation();
@@ -34,7 +38,11 @@ const NetworkSettings = () => {
             chevron
           />
         )}
+<<<<<<< HEAD
        {/*<BlueListItem title={loc.settings.tor_settings} onPress={navigateToTorSettings} testID="TorSettings" chevron />*/}
+=======
+        {!isDesktop && <BlueListItem title={loc.settings.tor_settings} onPress={navigateToTorSettings} testID="TorSettings" chevron />}
+>>>>>>> 646c5a8... DEL: Remove isCatalyst package
       </ScrollView>
     </SafeBlueArea>
   );

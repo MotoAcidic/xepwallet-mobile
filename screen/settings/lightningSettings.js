@@ -12,6 +12,10 @@ import { LightningCustodianWallet } from '../../class/wallets/lightning-custodia
 import loc from '../../loc';
 import { BlueCurrentTheme } from '../../components/themes';
 import DeeplinkSchemaMatch from '../../class/deeplink-schema-match';
+<<<<<<< HEAD
+=======
+import { isDesktop } from '../../blue_modules/environment';
+>>>>>>> 646c5a8... DEL: Remove isCatalyst package
 
 const styles = StyleSheet.create({
   uri: {
@@ -147,7 +151,11 @@ const LightningSettings = () => {
           />
         </View>
         <BlueSpacing20 />
+<<<<<<< HEAD
         <BlueText style={[styles.torSupported]}>{loc.settings.tor_supported}</BlueText>
+=======
+        {!isDesktop && <BlueText style={[styles.torSupported]}>{loc.settings.tor_supported}</BlueText>}
+>>>>>>> 646c5a8... DEL: Remove isCatalyst package
         <BlueSpacing20 />
         <BlueButtonLink title={loc.wallets.import_scan_qr} testID="ImportScan" onPress={importScan} />
         <BlueSpacing20 />
